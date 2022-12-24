@@ -74,6 +74,8 @@
 
 .center {
   display: flex;
+  flex-direction: column;
+  gap: 20px;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -97,7 +99,7 @@
 
 .center::before,
 .center::after {
-  content: '';
+  content: "";
   left: 50%;
   position: absolute;
   filter: blur(45px);
@@ -113,10 +115,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 75px;
-  height: 75px;
+  width: 100px;
+  height: 100px;
   padding: 25px 10px;
-  margin-left: 16px;
   transform: translateZ(0);
   border-radius: var(--border-radius);
   overflow: hidden;
@@ -125,7 +126,7 @@
 
 .thirteen::before,
 .thirteen::after {
-  content: '';
+  content: "";
   position: absolute;
   z-index: -1;
 }
@@ -222,7 +223,7 @@
   .description p {
     align-items: center;
     inset: 0 0 auto;
-    padding: 2rem 1rem 1.4rem;
+    padding: 20rem 1rem 1.4rem;
     border-radius: 0;
     border: none;
     border-bottom: 1px solid rgba(var(--callout-border-rgb), 0.25);
@@ -260,11 +261,6 @@
 @media (prefers-color-scheme: dark) {
   .vercelLogo {
     filter: invert(1);
-  }
-
-  .logo,
-  .thirteen img {
-    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
   }
 }
 
