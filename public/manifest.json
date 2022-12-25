@@ -13,6 +13,12 @@
       "sizes": "192x192"
     },
     {
+      "src": "SarrafEx-Logo.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    },
+    {
       "src": "icons/apple-icon-180x180.png",
       "type": "image/png",
       "sizes": "180x180"

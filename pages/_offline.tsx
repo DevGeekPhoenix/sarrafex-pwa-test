@@ -1,8 +1,7 @@
 import Image from "next/image";
-import Link from "next/link";
 import styles from "../styles/Home.module.css";
 
-export default function Home() {
+const Fallback = () => {
   return (
     <>
       <main className={styles.main}>
@@ -17,15 +16,13 @@ export default function Home() {
             />
           </div>
           <div className={styles.description}>
-            <h1>SarrefEx PWA Sample</h1>
-          </div>
-          <div className={styles.description}>
-            <Link href={"/btc"}>
-              <a href={"/btc"}>BITCOIN</a>
-            </Link>
+            {/* <h1>SarrefEx PWA Sample</h1> */}
+            <h1>You Are Offline</h1>
           </div>
         </div>
       </main>
     </>
   );
-}
+};
+
+export default Fallback;
