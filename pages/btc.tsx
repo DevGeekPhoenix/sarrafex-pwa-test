@@ -47,7 +47,6 @@ export default function Bitcoin() {
     setSubscription(sub);
     setIsSubscribed(true);
     console.log("web push subscribed!");
-    console.log(sub);
   };
 
   useEffect(() => {

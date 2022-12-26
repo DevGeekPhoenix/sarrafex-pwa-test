@@ -1,11 +1,12 @@
 import "../styles/globals.css";
 import styles from "../styles/Home.module.css";
-
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import packageJson from "../package.json";
+import { useUserDisplayModeRedirect } from "../hooks/useUserDisplayModeRedirect";
 
 export default function App({ Component, pageProps }: AppProps) {
+  useUserDisplayModeRedirect();
   return (
     <>
       <Head>
@@ -265,10 +266,14 @@ export default function App({ Component, pageProps }: AppProps) {
         <title>SarrafEx PWA Sample</title>
       </Head>
       <header
-        style={{ width: "100%", textAlign: "center", paddingTop: "20px" }}
+        style={{
+          backgroundColor: "#000",
+          textAlign: "center",
+          padding: "20px",
+        }}
         className={styles.description}
       >
-        version : {packageJson.version ? packageJson.version : "1.0.0"}
+        VERSION : {packageJson.version ? packageJson.version : "1.0.0"}
       </header>
       <Component {...pageProps} />
     </>
