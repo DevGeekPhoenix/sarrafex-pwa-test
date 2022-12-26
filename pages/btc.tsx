@@ -50,8 +50,6 @@ export default function Bitcoin() {
     console.log(sub);
   };
 
-  console.log(subscription);
-
   useEffect(() => {
     subscribeButtonOnClick();
   }, [registration]);

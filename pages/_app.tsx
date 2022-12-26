@@ -1,6 +1,9 @@
 import "../styles/globals.css";
+import styles from "../styles/Home.module.css";
+
 import type { AppProps } from "next/app";
 import Head from "next/head";
+import packageJson from "../package.json";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -261,7 +264,13 @@ export default function App({ Component, pageProps }: AppProps) {
 
         <title>SarrafEx PWA Sample</title>
       </Head>
-      <Component {...pageProps} />;
+      <header
+        style={{ width: "100%", textAlign: "center", paddingTop: "20px" }}
+        className={styles.description}
+      >
+        version : {packageJson.version ? packageJson.version : "1.0.0"}
+      </header>
+      <Component {...pageProps} />
     </>
   );
 }
