@@ -16,7 +16,6 @@ const Fallback = () => {
             />
           </div>
           <div className={styles.description}>
-            {/* <h1>SarrefEx PWA Sample</h1> */}
             <h1>You Are Offline</h1>
           </div>
         </div>
