@@ -1,13 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import webPush, { RequestOptions } from "web-push";
-
-interface ExtendsRequestOptions extends RequestOptions {
-  proxyUrl: string | undefined;
-  proxyPort: string | undefined;
-  headers: {
-    Host: string;
-  };
-}
+import webPush from "web-push-china";
 
 webPush.setVapidDetails(
   `mailto:${process.env.WEB_PUSH_EMAIL}`,
@@ -19,14 +11,6 @@ const Notification = async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method == "POST") {
     const { subscription, message, title } = req.body;
 
-    const proxyOptions: ExtendsRequestOptions = {
-      proxyUrl: process.env.NEXT_PUBLIC_PROXY_IP,
-      proxyPort: process.env.NEXT_PUBLIC_PROXY_PORT,
-      headers: {
-        Host: "fcm.googleapis.com",
-      },
-    };
-
     webPush
       .sendNotification(
         subscription,
@@ -34,7 +18,13 @@ const Notification = async (req: NextApiRequest, res: NextApiResponse) => {
           title: title,
           message: message,
         }),
-        proxyOptions
+        {
+          proxyUrl: process.env.NEXT_PUBLIC_PROXY_IP,
+          proxyPort: process.env.NEXT_PUBLIC_PROXY_PORT,
+          headers: {
+            Host: "fcm.googleapis.com",
+          },
+        }
       )
       .then((response: webPush.SendResult) => {
         res.writeHead(response.statusCode, response.headers).end(response.body);
