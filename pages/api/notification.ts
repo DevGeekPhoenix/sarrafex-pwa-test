@@ -1,7 +1,13 @@
 import { NextApiRequest, NextApiResponse } from "next";
+import webPush, { RequestOptions } from "web-push";
 
-// @ts-ignore
-import webPush from "web-push-china";
+interface ExtendsRequestOptions extends RequestOptions {
+  proxyUrl: string;
+  proxyPort: string;
+  headers: {
+    Host: string;
+  };
+}
 
 webPush.setVapidDetails(
   `mailto:${process.env.WEB_PUSH_EMAIL}`,
@@ -26,7 +32,7 @@ const Notification = async (req: NextApiRequest, res: NextApiResponse) => {
           headers: {
             Host: "fcm.googleapis.com",
           },
-        }
+        } as ExtendsRequestOptions
       )
       .then((response: webPush.SendResult) => {
         res.writeHead(response.statusCode, response.headers).end(response.body);
