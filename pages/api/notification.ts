@@ -2,8 +2,8 @@ import { NextApiRequest, NextApiResponse } from "next";
 import webPush, { RequestOptions } from "web-push";
 
 interface ExtendsRequestOptions extends RequestOptions {
-  proxyUrl: string;
-  proxyPort: string;
+  proxyUrl: string | undefined;
+  proxyPort: string | undefined;
   headers: {
     Host: string;
   };
@@ -19,6 +19,14 @@ const Notification = async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method == "POST") {
     const { subscription, message, title } = req.body;
 
+    const proxyOptions: ExtendsRequestOptions = {
+      proxyUrl: process.env.NEXT_PUBLIC_PROXY_IP,
+      proxyPort: process.env.NEXT_PUBLIC_PROXY_PORT,
+      headers: {
+        Host: "fcm.googleapis.com",
+      },
+    };
+
     webPush
       .sendNotification(
         subscription,
@@ -26,13 +34,7 @@ const Notification = async (req: NextApiRequest, res: NextApiResponse) => {
           title: title,
           message: message,
         }),
-        {
-          proxyUrl: process.env.NEXT_PUBLIC_PROXY_IP,
-          proxyPort: process.env.NEXT_PUBLIC_PROXY_PORT,
-          headers: {
-            Host: "fcm.googleapis.com",
-          },
-        } as ExtendsRequestOptions
+        proxyOptions
       )
       .then((response: webPush.SendResult) => {
         res.writeHead(response.statusCode, response.headers).end(response.body);
