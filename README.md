@@ -17,8 +17,8 @@ This project is a sample of PWA that we are using in SarraEx Project.
 
 >7.Shortcut pages for quick access 
 
-###Production Deployment
-----
+Production Deployment
+
  [https://sarrafex-pwa-sample.vercel.app](https://sarrafex-pwa-sample.vercel.app/)
 
 ###How To Use
