@@ -23,15 +23,15 @@ This project is a sample of PWA that we are using in SarraEx Project.
 
 ###How To Use
 
-#### 1- Clone the repo and run yarn install 
+####1- Clone the repo and run yarn install 
 `$ yarn`
-#### 2- Create a `.env` file and copy paste these variables
+####2- Create a `.env` file and copy paste these variables
     WEB_PUSH_EMAIL=< Email Address >
     WEB_PUSH_PRIVATE_KEY=< Your web push private key >
     NEXT_PUBLIC_WEB_PUSH_PUBLIC_KEY=< Your web push public key >
     NEXT_PUBLIC_PROXY_IP=< Your Proxy IP Address >
     NEXT_PUBLIC_PROXY_PORT=< Your Proxy Port >
-#### 3- run yarn vapid and copy paste the generated public and private keys to your `.env` 
+####3- run yarn vapid and copy paste the generated public and private keys to your `.env` 
 `$ yarn vapid`
 
 ####4- Build and start the project
