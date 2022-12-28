@@ -8,13 +8,15 @@ export default function Home() {
       <main className={styles.main}>
         <div className={styles.center}>
           <div className={styles.thirteen}>
-            <Image
-              src="/Sarrafex-Logo.png"
-              alt="Sarrafex Logo"
-              width={100}
-              height={100}
-              priority
-            />
+            <a rel="noreferer" href={"https://www.sarrafex.com"}>
+              <Image
+                src="/Sarrafex-Logo.png"
+                alt="Sarrafex Logo"
+                width={100}
+                height={100}
+                priority
+              />
+            </a>
           </div>
           <div className={styles.description}>
             <h1>SarrefEx PWA Sample</h1>
