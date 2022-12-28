@@ -4,9 +4,17 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import packageJson from "../package.json";
 import { useUserDisplayModeRedirect } from "../hooks/useUserDisplayModeRedirect";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
 
 export default function App({ Component, pageProps }: AppProps) {
-  useUserDisplayModeRedirect();
+  const [displayHome, setDisplayHome] = useState(true);
+
+  useUserDisplayModeRedirect().then(
+    (device) => device === "standalone" && setDisplayHome(false)
+  );
+
   return (
     <>
       <Head>
@@ -265,17 +273,64 @@ export default function App({ Component, pageProps }: AppProps) {
 
         <title>SarrafEx PWA Sample</title>
       </Head>
-      <header
-        style={{
-          backgroundColor: "#000",
-          textAlign: "center",
-          padding: "20px",
-        }}
-        className={styles.description}
-      >
-        VERSION : {packageJson.version ? packageJson.version : "1.0.0"}
+      <header className={styles.headerContainer}>
+        <div className={styles.navContainer}>
+          {displayHome && (
+            <Link href={"/"}>
+              <a className={styles.navItem} href={"/"}>
+                Home
+              </a>
+            </Link>
+          )}
+          <Link href={"/btc"}>
+            <a className={styles.navItem} href={"/btc"}>
+              Bitcoin
+            </a>
+          </Link>
+          <Link href={"/dashboard"}>
+            <a className={styles.navItem} href={"/dashboard"}>
+              Dashboard
+            </a>
+          </Link>
+        </div>
+        <div className={styles.navContainer}>
+          VERSION : {packageJson.version ? packageJson.version : "1.0.0"}
+          <Image
+            src="/Sarrafex-Logo.png"
+            alt="Sarrafex Logo"
+            width={40}
+            height={40}
+            priority
+          />
+        </div>
       </header>
       <Component {...pageProps} />
+      <footer className={styles.footerContainer}>
+        <div className={styles.footerBackGroundContainer}></div>
+        <div className={styles.footerItemContainer}>
+          {displayHome && (
+            <Link href={"/"}>
+              <a className={styles.navItem} href={"/"}>
+                Home
+              </a>
+            </Link>
+          )}
+
+          <Link href={"/btc"}>
+            <a className={styles.navItem} href={"/btc"}>
+              Bitcoin
+            </a>
+          </Link>
+          <Link href={"/dashboard"}>
+            <a className={styles.navItem} href={"/dashboard"}>
+              Dashboard
+            </a>
+          </Link>
+        </div>
+        <div className={styles.footerVersion}>
+          VERSION : {packageJson.version ? packageJson.version : "1.0.0"}
+        </div>
+      </footer>
     </>
   );
 }

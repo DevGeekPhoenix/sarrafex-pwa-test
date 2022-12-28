@@ -24,4 +24,5 @@ export const useUserDisplayModeRedirect = async () => {
       push("/dashboard");
     }
   }, [displayMode]);
+  return displayMode;
 };

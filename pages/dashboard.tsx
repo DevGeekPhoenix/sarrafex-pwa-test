@@ -21,7 +21,13 @@ export default function Home() {
           </div>
           <div className={styles.description}>
             <Link href={"/btc"}>
-              <a href={"/btc"}>BITCOIN</a>
+              <a
+                className={styles.thirteen}
+                style={{ height: "40px", cursor: "pointer" }}
+                href={"/btc"}
+              >
+                BITCOIN
+              </a>
             </Link>
           </div>
         </div>

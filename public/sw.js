@@ -1,1 +1,109 @@
-if(!self.define){let e,n={};const i=(i,a)=>(i=new URL(i+".js",a).href,n[i]||new Promise((n=>{if("document"in self){const e=document.createElement("script");e.src=i,e.onload=n,document.head.appendChild(e)}else e=i,importScripts(i),n()})).then((()=>{let e=n[i];if(!e)throw new Error(`Module ${i} didn’t register its module`);return e})));self.define=(a,s)=>{const r=e||("document"in self?document.currentScript.src:"")||location.href;if(n[r])return;let o={};const c=e=>i(e,r),_={module:{uri:r},exports:o,require:c};n[r]=Promise.all(a.map((e=>_[e]||c(e)))).then((e=>(s(...e),o)))}}define(["./workbox-588899ac"],(function(e){"use strict";importScripts("fallback-Rv1_oxZspfCTlHkpBZ9kj.js","worker-Rv1_oxZspfCTlHkpBZ9kj.js"),self.skipWaiting(),e.clientsClaim(),e.precacheAndRoute([{url:"/Sarrafex-Logo.png",revision:"daf4552e9e1acaf928b3d7375c874ac3"},{url:"/_next/static/Rv1_oxZspfCTlHkpBZ9kj/_buildManifest.js",revision:"d6983b2b89bb56b72bdcde4eb9b5c8ea"},{url:"/_next/static/Rv1_oxZspfCTlHkpBZ9kj/_ssgManifest.js",revision:"b6652df95db52feb4daf4eca35380933"},{url:"/_next/static/chunks/675-20dc8f91278ac505.js",revision:"20dc8f91278ac505"},{url:"/_next/static/chunks/framework-4556c45dd113b893.js",revision:"4556c45dd113b893"},{url:"/_next/static/chunks/main-6c884fd140def4f4.js",revision:"6c884fd140def4f4"},{url:"/_next/static/chunks/pages/_app-fab8a2edf29ddb0b.js",revision:"fab8a2edf29ddb0b"},{url:"/_next/static/chunks/pages/_error-a4ba2246ff8fb532.js",revision:"a4ba2246ff8fb532"},{url:"/_next/static/chunks/pages/_offline-fa97783a25607757.js",revision:"fa97783a25607757"},{url:"/_next/static/chunks/pages/btc-8e10e902e906e344.js",revision:"8e10e902e906e344"},{url:"/_next/static/chunks/pages/dashboard-5c7c376a201a91bd.js",revision:"5c7c376a201a91bd"},{url:"/_next/static/chunks/pages/index-188941b75d1d7eb9.js",revision:"188941b75d1d7eb9"},{url:"/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js",revision:"837c0df77fd5009c9e46d446188ecfd0"},{url:"/_next/static/chunks/webpack-69bfa6990bb9e155.js",revision:"69bfa6990bb9e155"},{url:"/_next/static/css/776ce53b97f3f0d8.css",revision:"776ce53b97f3f0d8"},{url:"/_offline",revision:"Rv1_oxZspfCTlHkpBZ9kj"},{url:"/bitcoin.png",revision:"0bba3cafd1dc1e5d42a0e1467c4033f1"},{url:"/favicon.ico",revision:"390f4ca348544be90b0fcdae732083fc"},{url:"/icons/10.2__iPad_landscape.png",revision:"44350133cbc3779f91b015173aa6bf6f"},{url:"/icons/10.2__iPad_portrait.png",revision:"0a9a3145c938d92e73ef4e0ec4ea423f"},{url:"/icons/10.5__iPad_Air_landscape.png",revision:"388909261d9243facd47bfcb02d2f813"},{url:"/icons/10.5__iPad_Air_portrait.png",revision:"739c680f1d52e9d18a2ab38b0a64fbef"},{url:"/icons/10.9__iPad_Air_landscape.png",revision:"c5e08a2012bafe9bb588003a906bfab6"},{url:"/icons/10.9__iPad_Air_portrait.png",revision:"bb617a56754c15521502229c8625e487"},{url:"/icons/11__iPad_Pro__10.5__iPad_Pro_landscape.png",revision:"710c7edff108716b09c02917a44cec48"},{url:"/icons/11__iPad_Pro__10.5__iPad_Pro_portrait.png",revision:"a5686c32d7d84ff59da51892cfa73aad"},{url:"/icons/12.9__iPad_Pro_landscape.png",revision:"fea79374ce2d445ea3dcfb3d5e1922d2"},{url:"/icons/12.9__iPad_Pro_portrait.png",revision:"c0441fc301fecbe232e8503534dce300"},{url:"/icons/4__iPhone_SE__iPod_touch_5th_generation_and_later_landscape.png",revision:"57a0d1eb120bd2d5214b1d85db9f5fa9"},{url:"/icons/4__iPhone_SE__iPod_touch_5th_generation_and_later_portrait.png",revision:"66b51289769fcf5bf3dc3ab2dfaebd80"},{url:"/icons/8.3__iPad_Mini_landscape.png",revision:"9934811656bdff560f11cfea2c51d0c3"},{url:"/icons/8.3__iPad_Mini_portrait.png",revision:"b783d444a58280ba715f6d4647465969"},{url:"/icons/9.7__iPad_Pro__7.9__iPad_mini__9.7__iPad_Air__9.7__iPad_landscape.png",revision:"197984910041a343075fe37e8004190e"},{url:"/icons/9.7__iPad_Pro__7.9__iPad_mini__9.7__iPad_Air__9.7__iPad_portrait.png",revision:"f6f6aa4bc9c42b8ad88b419cfdd9990f"},{url:"/icons/android-icon-192x192.png",revision:"104459431a8e9467a6e81c7d9744203a"},{url:"/icons/apple-icon-114x114.png",revision:"fec22b39b2d1793cc3c04e4f78808dc5"},{url:"/icons/apple-icon-120x120.png",revision:"47ead360a8ccbc8c8f1410edde69d4af"},{url:"/icons/apple-icon-144x144.png",revision:"2b8bac98d5cf4b92bbdc6bbeb3313938"},{url:"/icons/apple-icon-152x152.png",revision:"4f4f405a4d3fdaa09fdf2140c4549975"},{url:"/icons/apple-icon-180x180.png",revision:"d8de4e89815a9bff5d35e90a8cc8c2c6"},{url:"/icons/apple-icon-57x57.png",revision:"9a32232a33c14f7350cd0fc549d498ce"},{url:"/icons/apple-icon-60x60.png",revision:"82403a59c88711eccfde74556de62301"},{url:"/icons/apple-icon-72x72.png",revision:"2fa314626adf17cc34c07e6a313541af"},{url:"/icons/apple-icon-76x76.png",revision:"ea5ece324f4e56ab1abeed6e182cf0bb"},{url:"/icons/favicon-16x16.png",revision:"07c427868c2136e827f11e3af8c4fbed"},{url:"/icons/favicon-32x32.png",revision:"6b944ef29b630ac45c70ef3e2710a1d4"},{url:"/icons/favicon-96x96.png",revision:"275360deda9ad8ed49b812f3e1790c71"},{url:"/icons/iPhone_11_Pro_Max__iPhone_XS_Max_landscape.png",revision:"aac4e5e2c50af80b6fce4bf12a62eca8"},{url:"/icons/iPhone_11_Pro_Max__iPhone_XS_Max_portrait.png",revision:"72aa34b6711b84b5469e7b27d9e504b4"},{url:"/icons/iPhone_11__iPhone_XR_landscape.png",revision:"f1964a0ec856344965697ecfe0deae48"},{url:"/icons/iPhone_11__iPhone_XR_portrait.png",revision:"8edce72617e0d3a21153ad5411dbb71a"},{url:"/icons/iPhone_13_mini__iPhone_12_mini__iPhone_11_Pro__iPhone_XS__iPhone_X_landscape.png",revision:"307c6f2b264c75e66e456e9502fdb323"},{url:"/icons/iPhone_13_mini__iPhone_12_mini__iPhone_11_Pro__iPhone_XS__iPhone_X_portrait.png",revision:"64223a1bfcddab5bd66fb0a8c05d3ae8"},{url:"/icons/iPhone_14_Plus__iPhone_13_Pro_Max__iPhone_12_Pro_Max_landscape.png",revision:"57b80787151be08293cd6179d557887a"},{url:"/icons/iPhone_14_Plus__iPhone_13_Pro_Max__iPhone_12_Pro_Max_portrait.png",revision:"885e53c51e18f70d2169f3ca8e8e0dae"},{url:"/icons/iPhone_14_Pro_Max_landscape.png",revision:"8b4fad264cf6ae3dc26e220b78d02fe5"},{url:"/icons/iPhone_14_Pro_Max_portrait.png",revision:"406c2c599a0dc0019226245e49cd48a1"},{url:"/icons/iPhone_14_Pro_landscape.png",revision:"2e6ed7933f6d92b7b75da1787c30cbef"},{url:"/icons/iPhone_14_Pro_portrait.png",revision:"027bfa3b6a9eace949d165201d3b0f65"},{url:"/icons/iPhone_14__iPhone_13_Pro__iPhone_13__iPhone_12_Pro__iPhone_12_landscape.png",revision:"2f5ec650e5063b0041abfea865725639"},{url:"/icons/iPhone_14__iPhone_13_Pro__iPhone_13__iPhone_12_Pro__iPhone_12_portrait.png",revision:"a2fdd5f42b718d65032fdd6fa4789613"},{url:"/icons/iPhone_8_Plus__iPhone_7_Plus__iPhone_6s_Plus__iPhone_6_Plus_landscape.png",revision:"ef2c26e80fadbef313f770a8704962e5"},{url:"/icons/iPhone_8_Plus__iPhone_7_Plus__iPhone_6s_Plus__iPhone_6_Plus_portrait.png",revision:"ce15ee047cc1885cba938358a1daa712"},{url:"/icons/iPhone_8__iPhone_7__iPhone_6s__iPhone_6__4.7__iPhone_SE_landscape.png",revision:"8f30755e1d69f4731dd87cad48438812"},{url:"/icons/iPhone_8__iPhone_7__iPhone_6s__iPhone_6__4.7__iPhone_SE_portrait.png",revision:"a72958c5897fd0e821a96fae5bb5bbf2"},{url:"/icons/icon.png",revision:"2384f6237c7e2ff587e3334f9594703b"},{url:"/manifest.json",revision:"8b38298f5ec375e8b5c1eda0d1fa011b"}],{ignoreURLParametersMatching:[]}),e.cleanupOutdatedCaches(),e.registerRoute("/",new e.NetworkFirst({cacheName:"start-url",plugins:[{cacheWillUpdate:async({request:e,response:n,event:i,state:a})=>n&&"opaqueredirect"===n.type?new Response(n.body,{status:200,statusText:"OK",headers:n.headers}):n},{handlerDidError:async({request:e})=>self.fallback(e)}]}),"GET"),e.registerRoute(/^https:\/\/fonts\.(?:gstatic)\.com\/.*/i,new e.CacheFirst({cacheName:"google-fonts-webfonts",plugins:[new e.ExpirationPlugin({maxEntries:4,maxAgeSeconds:31536e3}),{handlerDidError:async({request:e})=>self.fallback(e)}]}),"GET"),e.registerRoute(/^https:\/\/fonts\.(?:googleapis)\.com\/.*/i,new e.StaleWhileRevalidate({cacheName:"google-fonts-stylesheets",plugins:[new e.ExpirationPlugin({maxEntries:4,maxAgeSeconds:604800}),{handlerDidError:async({request:e})=>self.fallback(e)}]}),"GET"),e.registerRoute(/\.(?:eot|otf|ttc|ttf|woff|woff2|font.css)$/i,new e.StaleWhileRevalidate({cacheName:"static-font-assets",plugins:[new e.ExpirationPlugin({maxEntries:4,maxAgeSeconds:604800}),{handlerDidError:async({request:e})=>self.fallback(e)}]}),"GET"),e.registerRoute(/\.(?:jpg|jpeg|gif|png|svg|ico|webp)$/i,new e.StaleWhileRevalidate({cacheName:"static-image-assets",plugins:[new e.ExpirationPlugin({maxEntries:64,maxAgeSeconds:86400}),{handlerDidError:async({request:e})=>self.fallback(e)}]}),"GET"),e.registerRoute(/\/_next\/image\?url=.+$/i,new e.StaleWhileRevalidate({cacheName:"next-image",plugins:[new e.ExpirationPlugin({maxEntries:64,maxAgeSeconds:86400}),{handlerDidError:async({request:e})=>self.fallback(e)}]}),"GET"),e.registerRoute(/\.(?:mp3|wav|ogg)$/i,new e.CacheFirst({cacheName:"static-audio-assets",plugins:[new e.RangeRequestsPlugin,new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:86400}),{handlerDidError:async({request:e})=>self.fallback(e)}]}),"GET"),e.registerRoute(/\.(?:mp4)$/i,new e.CacheFirst({cacheName:"static-video-assets",plugins:[new e.RangeRequestsPlugin,new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:86400}),{handlerDidError:async({request:e})=>self.fallback(e)}]}),"GET"),e.registerRoute(/\.(?:js)$/i,new e.StaleWhileRevalidate({cacheName:"static-js-assets",plugins:[new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:86400}),{handlerDidError:async({request:e})=>self.fallback(e)}]}),"GET"),e.registerRoute(/\.(?:css|less)$/i,new e.StaleWhileRevalidate({cacheName:"static-style-assets",plugins:[new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:86400}),{handlerDidError:async({request:e})=>self.fallback(e)}]}),"GET"),e.registerRoute(/\/_next\/data\/.+\/.+\.json$/i,new e.StaleWhileRevalidate({cacheName:"next-data",plugins:[new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:86400}),{handlerDidError:async({request:e})=>self.fallback(e)}]}),"GET"),e.registerRoute(/\.(?:json|xml|csv)$/i,new e.NetworkFirst({cacheName:"static-data-assets",plugins:[new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:86400}),{handlerDidError:async({request:e})=>self.fallback(e)}]}),"GET"),e.registerRoute((({url:e})=>{if(!(self.origin===e.origin))return!1;const n=e.pathname;return!n.startsWith("/api/auth/")&&!!n.startsWith("/api/")}),new e.NetworkFirst({cacheName:"apis",networkTimeoutSeconds:10,plugins:[new e.ExpirationPlugin({maxEntries:16,maxAgeSeconds:86400}),{handlerDidError:async({request:e})=>self.fallback(e)}]}),"GET"),e.registerRoute((({url:e})=>{if(!(self.origin===e.origin))return!1;return!e.pathname.startsWith("/api/")}),new e.NetworkFirst({cacheName:"others",networkTimeoutSeconds:10,plugins:[new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:86400}),{handlerDidError:async({request:e})=>self.fallback(e)}]}),"GET"),e.registerRoute((({url:e})=>!(self.origin===e.origin)),new e.NetworkFirst({cacheName:"cross-origin",networkTimeoutSeconds:10,plugins:[new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:3600}),{handlerDidError:async({request:e})=>self.fallback(e)}]}),"GET")}));
+/**
+ * Copyright 2018 Google Inc. All Rights Reserved.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+// If the loader is already loaded, just stop.
+if (!self.define) {
+  let registry = {};
+
+  // Used for `eval` and `importScripts` where we can't get script URL by other means.
+  // In both cases, it's safe to use a global var because those functions are synchronous.
+  let nextDefineUri;
+
+  const singleRequire = (uri, parentUri) => {
+    uri = new URL(uri + ".js", parentUri).href;
+    return registry[uri] || (
+      
+        new Promise(resolve => {
+          if ("document" in self) {
+            const script = document.createElement("script");
+            script.src = uri;
+            script.onload = resolve;
+            document.head.appendChild(script);
+          } else {
+            nextDefineUri = uri;
+            importScripts(uri);
+            resolve();
+          }
+        })
+      
+      .then(() => {
+        let promise = registry[uri];
+        if (!promise) {
+          throw new Error(`Module ${uri} didn’t register its module`);
+        }
+        return promise;
+      })
+    );
+  };
+
+  self.define = (depsNames, factory) => {
+    const uri = nextDefineUri || ("document" in self ? document.currentScript.src : "") || location.href;
+    if (registry[uri]) {
+      // Module is already loading or loaded.
+      return;
+    }
+    let exports = {};
+    const require = depUri => singleRequire(depUri, uri);
+    const specialDeps = {
+      module: { uri },
+      exports,
+      require
+    };
+    registry[uri] = Promise.all(depsNames.map(
+      depName => specialDeps[depName] || require(depName)
+    )).then(deps => {
+      factory(...deps);
+      return exports;
+    });
+  };
+}
+define(['./workbox-327c579b'], (function (workbox) { 'use strict';
+
+  importScripts("fallback-development.js", "worker-development.js");
+  self.skipWaiting();
+  workbox.clientsClaim();
+  workbox.registerRoute("/", new workbox.NetworkFirst({
+    "cacheName": "start-url",
+    plugins: [{
+      cacheWillUpdate: async ({
+        request,
+        response,
+        event,
+        state
+      }) => {
+        if (response && response.type === 'opaqueredirect') {
+          return new Response(response.body, {
+            status: 200,
+            statusText: 'OK',
+            headers: response.headers
+          });
+        }
+        return response;
+      }
+    }, {
+      handlerDidError: async ({
+        request
+      }) => self.fallback(request)
+    }]
+  }), 'GET');
+  workbox.registerRoute(/.*/i, new workbox.NetworkOnly({
+    "cacheName": "dev",
+    plugins: [{
+      handlerDidError: async ({
+        request
+      }) => self.fallback(request)
+    }]
+  }), 'GET');
+
+}));
+//# sourceMappingURL=sw.js.map
