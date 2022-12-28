@@ -11,8 +11,8 @@ import { useState } from "react";
 export default function App({ Component, pageProps }: AppProps) {
   const [displayHome, setDisplayHome] = useState(true);
 
-  useUserDisplayModeRedirect().then(
-    (device) => device === "standalone" && setDisplayHome(false)
+  useUserDisplayModeRedirect().then((device) =>
+    device === "standalone" ? setDisplayHome(false) : setDisplayHome(true)
   );
 
   return (

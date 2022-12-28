@@ -82,20 +82,9 @@
   ],
   "shortcuts": [
     {
-      "name": "Deposit",
-      "url": "/wallet/deposit",
-      "description": "deposit",
-      "icons": [
-        {
-          "src": "icons/favicon-96x96.png",
-          "sizes": "96x96"
-        }
-      ]
-    },
-    {
-      "name": "Withdraw",
-      "url": "/wallet/withdraw",
-      "description": "withdraw",
+      "name": "BitCoin",
+      "url": "/btc",
+      "description": "BitCoin Page",
       "icons": [
         {
           "src": "icons/favicon-96x96.png",

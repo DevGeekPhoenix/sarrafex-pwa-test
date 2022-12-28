@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# SarrafEx PWA Sample
 
-## Getting Started
+This project is a sample of PWA that we are using in SarraEx Project.
 
-First, run the development server:
+## Features
+> 1.Cleanup outdated caches
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+> 2.Proxied server side push notification api
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+> 3.Show Dashboard page as main page when user use pwa and show home page when user use browser tab
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+> 4.Offline fallback page
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+> 5.Startup splash screen for all devices
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+>6.Custom PWA Worker
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+>7.Shortcut pages for quick access 
 
-## Learn More
+###Production Deployment
+----
+ [https://sarrafex-pwa-sample.vercel.app](https://sarrafex-pwa-sample.vercel.app/)
 
-To learn more about Next.js, take a look at the following resources:
+###How To Use
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#### 1- Clone the repo and run yarn install 
+`$ yarn`
+#### 2- Create a `.env` file and copy paste these variables
+    WEB_PUSH_EMAIL=< Email Address >
+    WEB_PUSH_PRIVATE_KEY=< Your web push private key >
+    NEXT_PUBLIC_WEB_PUSH_PUBLIC_KEY=< Your web push public key >
+    NEXT_PUBLIC_PROXY_IP=< Your Proxy IP Address >
+    NEXT_PUBLIC_PROXY_PORT=< Your Proxy Port >
+#### 3- run yarn vapid and copy paste the generated public and private keys to your `.env` 
+`$ yarn vapid`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+####4- Build and start the project
+`$ yarn build`
+`$ yarn start`
 
-## Deploy on Vercel
+>:tw-26a0: if you want to get notification when using your local server do these steps below
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+#####1.Paste this address below in a blank chrome tab and go to chrome flag setting
+`chrome://flags/#unsafely-treat-insecure-origin-as-secure`
+#####2.Paste your local server address and port in* Insecure origins treated as secure* field
+`http://<Your Local Host>:3999`
+#####3.Enable * Insecure origins treated as secure*  and relunch your browser 
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
