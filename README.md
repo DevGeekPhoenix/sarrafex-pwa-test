@@ -19,8 +19,11 @@ This project is a sample of PWA that we are using in SarraEx Project.
 
 ### Built With
 1- [JavaScript](https://www.javascript.com) 
+
 2- [Next Js](https://nextjs.org)
+
 3- [Next-PWA](https://www.npmjs.com/package/next-pwa)
+
 4- [Web-Push](https://www.npmjs.com/package/web-push)
 
 ### Production Deployment
