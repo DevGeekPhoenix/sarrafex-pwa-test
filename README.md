@@ -1,4 +1,4 @@
-# SarrafEx PWA Sample
+# SarrafEx Next.Js PWA Sample
 
 This project is a sample of PWA that we are using in SarraEx Project.
 
@@ -16,6 +16,12 @@ This project is a sample of PWA that we are using in SarraEx Project.
 >6.Custom PWA Worker
 
 >7.Shortcut pages for quick access 
+
+### Built With
+1- [JavaScript](https://www.javascript.com) 
+2- [Next Js](https://nextjs.org)
+3- [Next-PWA](https://www.npmjs.com/package/next-pwa)
+4- [Web-Push](https://www.npmjs.com/package/web-push)
 
 ### Production Deployment
 
