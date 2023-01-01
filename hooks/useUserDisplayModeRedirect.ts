@@ -6,8 +6,6 @@ export const useUserDisplayModeRedirect = async () => {
 
   const [displayMode, setDisplayMode] = useState("browser tab");
 
-  console.log(asPath);
-
   useEffect(() => {
     // @ts-ignore
     if (navigator.standalone) {
