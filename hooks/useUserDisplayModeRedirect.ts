@@ -2,9 +2,11 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
 export const useUserDisplayModeRedirect = async () => {
-  const { push, reload } = useRouter();
+  const { push, reload, asPath } = useRouter();
 
   const [displayMode, setDisplayMode] = useState("browser tab");
+
+  console.log(asPath);
 
   useEffect(() => {
     // @ts-ignore
@@ -20,9 +22,12 @@ export const useUserDisplayModeRedirect = async () => {
   }, [displayMode]);
 
   useEffect(() => {
-    if (displayMode === "standalone" || displayMode === "standalone-ios") {
+    if (
+      (displayMode === "standalone" || displayMode === "standalone-ios") &&
+      asPath === "/"
+    ) {
       push("/dashboard");
     }
-  }, [displayMode]);
+  }, [displayMode, asPath]);
   return displayMode;
 };
