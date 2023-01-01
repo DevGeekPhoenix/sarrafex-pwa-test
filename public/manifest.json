@@ -83,14 +83,10 @@
   "shortcuts": [
     {
       "name": "BitCoin",
-      "url": "/btc",
+      "short_name": "BitCoin",
       "description": "BitCoin Page",
-      "icons": [
-        {
-          "src": "icons/favicon-96x96.png",
-          "sizes": "96x96"
-        }
-      ]
+      "url": "/btc",
+      "icons": [{ "src": "icons/android-icon-192x192.png", "sizes": "192x192" }]
     }
   ]
 }
