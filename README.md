@@ -1,6 +1,6 @@
 # SarrafEx Next.Js PWA Sample
 
-This project is a sample of PWA that we are using in SarraEx Project.
+This repository contains the code for the Sarrafex PWA Test.
 
 ## Features
 > 1.Cleanup outdated caches
